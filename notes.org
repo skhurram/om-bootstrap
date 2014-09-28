@@ -1,0 +1,34 @@
+* currently all development is in develop branch
+$ git checkout develop
+
+* Development setup
+
+Terminal:
+tab 1: lein cljsbuild docs auto
+
+
+emacs
+Open ~/projects/om-bootstrap/docs/src/clj/om_bootstrap/server.clj
+
+cider
+C-c C-j cider jack-in
+C-c C-k compile
+C-c M-n change repl namespace to the buffer namespace
+
+In repl:
+(-main)
+
+Firefox:
+http://localhost:8080
+
+Firebug, console
+
+Whenever a component's snippet is changed, touch components.cljs to
+force comiplation by cljsbuild because dev folder is not watched by
+cljsbuild (and snippets are in dev folder).
+
+M-S-!
+touch /Users/mdk/projects/om-bootstrap/docs/src/cljs/om_bootstrap/docs/components.cljs
+
+
+*
